@@ -7,7 +7,6 @@
 // "LOSE" - Player robot's health is zero or less
 
 
-// THIS CREATES A FUNCTION NAMED "FIGHT"
 // THIS STORES A STRING
 var playerName = window.prompt("What is yout robots's name?");
 var playerHealth = 100;
@@ -15,15 +14,17 @@ var playerAttack = 10;
 var playerMoney = 10;
 
 // You can also log multiple values at once like this
-console.log(playerName, playerAttack, playerHealth);
+// console.log(playerName, playerAttack, playerHealth);
 
-// THIS IS A STRING DATA TYPE
-var enemyName = "Roborto";
-// THIS IS A NUMBER DATA TYPE
+// THIS IS AN ARRAY THAT CONTAINS STRINGS DATA TYPE TO STORE ENEMY NAMES
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+// THIS IS A NUMBER DATA TYPE TO STORE ENEMY'S STATS
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function () {
+
+// THIS CREATES A FUNCTION NAMED "FIGHT"
+var fight = function (enemyName) {
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators!");
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -82,4 +83,7 @@ var fight = function () {
 
 };
 
-// fight();
+// THIS FOR LOOP WILL CALL THE FIGHT FUNCTION AND LOOP THROUGH ALL THE ENEMY NAMES DURING BATTLE ROUNDS
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
