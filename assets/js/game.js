@@ -91,10 +91,9 @@ var fight = function (enemyName) {
             window.alert(playerName + " still has " + playerHealth + " health points left.");
         }
     }   // end of while loop
-
 };  // end of fight function
 
-// THIS FOR LOOP WILL CALL THE FIGHT FUNCTION AND LOOP THROUGH ALL THE ENEMY NAMES DURING BATTLE ROUNDS
+// FIGHT EACH ENEMY-ROBOT BY LOOPING OVER THEM AND FIGHTING THEM ONCE AT A TIME
 for (var i = 0; i < enemyNames.length; i++) {
     if (playerHealth > 0) {
         // let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
@@ -108,8 +107,9 @@ for (var i = 0; i < enemyNames.length; i++) {
         // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
         fight(pickedEnemyName);
     }
+    // if player isn't alive, stop the game
     else {
-        window.alert("You have lost your robot in battle! Game Over!");
+        window.alert('You have lost your robot in battle! Game Over!');
         break;
     }
 };
