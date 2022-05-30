@@ -20,7 +20,7 @@ var playerMoney = 10;
 // console.log(playerName, playerAttack, playerHealth);
 
 // THIS IS AN ARRAY THAT CONTAINS STRINGS DATA TYPE TO STORE ENEMY NAMES
-var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble", "Megatron"];
 // THIS IS A NUMBER DATA TYPE TO STORE ENEMY'S STATS
 var enemyHealth = 50;
 var enemyAttack = 12;
